@@ -1,0 +1,4 @@
+boto3>=1.40.0
+bedrock-agentcore[strands-agents]
+strands-agents
+strands-agents-tools

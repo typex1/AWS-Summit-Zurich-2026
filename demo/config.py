@@ -1,6 +1,8 @@
 """Shared configuration and state handling for the AgentCore Payments demo.
 
-All AWS calls use the '<aws-profile>' profile in us-east-1.
+Set your AWS profile and region below (or via the DEMO_AWS_PROFILE /
+DEMO_AWS_REGION environment variables). AgentCore Payments must be
+available in the chosen region.
 Resource ARNs/IDs (never secrets) are persisted to demo_state.json so the
 scripts can be run independently and in sequence.
 """
@@ -11,8 +13,8 @@ from pathlib import Path
 
 import boto3
 
-AWS_PROFILE = os.environ.get("DEMO_AWS_PROFILE", "<aws-profile>")
-REGION = os.environ.get("DEMO_AWS_REGION", "us-east-1")
+AWS_PROFILE = os.environ.get("DEMO_AWS_PROFILE", "default")  # <- your AWS CLI profile
+REGION = os.environ.get("DEMO_AWS_REGION", "us-east-1")      # <- your region
 
 # Resource names (payment manager/connector names must match [a-zA-Z][a-zA-Z0-9]{0,47})
 PAYMENT_MANAGER_NAME = "summitDemoPayments"

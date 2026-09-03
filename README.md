@@ -33,7 +33,9 @@ No credentials in the agent, no unbounded spending.
 
 ## Prerequisites (already done)
 
-- AWS profile `<aws-profile>` (account <ACCOUNT_ID>), region `us-east-1`
+- An AWS account with AgentCore Payments available, region `us-east-1`
+  (set your profile/region in `demo/config.py` — `AWS_PROFILE`, `REGION` —
+  or via `DEMO_AWS_PROFILE` / `DEMO_AWS_REGION`)
 - AWS Marketplace subscription: *Coinbase Wallets for AgentCore Payments*
 - Coinbase CDP credentials in `~/Downloads/cdp_api_key.json` and
   `~/Downloads/cdp_wallet_secret.txt` (with **Delegated signing** enabled
@@ -58,7 +60,7 @@ State (ARNs/IDs, no secrets) is stored in `demo/demo_state.json`.
 
 ## Current status (as of Aug 21)
 
-Everything below is **provisioned and verified** in account <ACCOUNT_ID> / us-east-1:
+Everything below is **provisioned and verified** in the demo account / us-east-1:
 
 | Resource | Value | Status |
 |----------|-------|--------|

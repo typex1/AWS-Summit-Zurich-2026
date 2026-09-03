@@ -75,6 +75,11 @@ pip install -r requirements.txt     # once
 cd demo
 ```
 
+Before the first run, set your AWS profile and region in `demo/config.py`
+(`AWS_PROFILE`, `REGION`) — or export `DEMO_AWS_PROFILE` / `DEMO_AWS_REGION`
+instead. The account needs AgentCore Payments available in that region plus
+the Coinbase CDP prerequisites from the README.
+
 ### 1. Fresh budget-limited session — "$1 max, 2 hours, infrastructure-enforced"
 
 ```bash

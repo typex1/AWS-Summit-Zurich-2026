@@ -68,8 +68,10 @@ Key talking point: the agent contains **zero payment code**. The plugin intercep
 ### 0. One-time terminal setup
 
 ```bash
-cd ~/Documents/Projects/AgentCore-Payments_20260821
+cd /path/to/AWS-Summit-Zurich-2026   # wherever you cloned this repo
+python3 -m venv .venv                # once, if not created yet
 source .venv/bin/activate
+pip install -r requirements.txt     # once
 cd demo
 ```
 
